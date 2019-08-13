@@ -18,7 +18,16 @@ spring:
       time-between-eviction-runs-millis: 60000
       # 配置一个连接在池中最小生存的时间，单位是毫秒2
       min-evictable-idle-time-millis: 300000
-
+  application:
+    name: user-service-lsw #应用名称
 # mybatis别名
 mybatis:
   type-aliases-package: com.lsw.userservice.pojo
+
+eureka:
+  client: #eureka server的地址
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    prefer-ip-address: true # 当调用getHostname获取实例的hostname时，返回ip而不是host名称
+    ip-address: 127.0.0.1 # 指定自己的ip信息，不指定的话会自己寻找

@@ -7,7 +7,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cloud-project (1)" />
         <module name="eureka-server" />
         <module name="user-comsumer" />
         <module name="user-consumer" />

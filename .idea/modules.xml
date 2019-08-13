@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/cloud-project.iml" filepath="$PROJECT_DIR$/.idea/cloud-project.iml" />
-      <module fileurl="file://$PROJECT_DIR$/eureka-server/cloud-project (1).iml" filepath="$PROJECT_DIR$/eureka-server/cloud-project (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/user-consumer/user-comsumer.iml" filepath="$PROJECT_DIR$/user-consumer/user-comsumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/user-consumer/user-consumer.iml" filepath="$PROJECT_DIR$/user-consumer/user-consumer.iml" />

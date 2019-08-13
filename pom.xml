@@ -14,11 +14,13 @@
     <modules>
         <module>user-service</module>
         <module>user-consumer</module>
+        <module>eureka-server</module>
     </modules>
 
     <!--定义版本-->
     <properties>
         <java.version>1.8</java.version>
+        <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
     </properties>
 
     <!--starter parent-->
