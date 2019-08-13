@@ -2,27 +2,34 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="user-comsumer" />
+        <module name="cloud-project (1)" />
         <module name="eureka-server" />
+        <module name="user-comsumer" />
+        <module name="user-consumer" />
         <module name="user-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cloud-project" target="1.8" />
+      <module name="cloud-project (1)" target="1.8" />
       <module name="eureka-server" target="1.8" />
       <module name="user-comsumer" target="1.8" />
+      <module name="user-consumer" target="1.8" />
       <module name="user-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="cloud-project" options="-parameters" />
+      <module name="cloud-project (1)" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="user-comsumer" options="-parameters" />
+      <module name="user-consumer" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>
   </component>
