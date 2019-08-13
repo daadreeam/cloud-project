@@ -13,7 +13,7 @@
     <!--定义模块-->
     <modules>
         <module>user-service</module>
-        <module>user-comsumer</module>
+        <module>user-consumer</module>
     </modules>
 
     <!--定义版本-->

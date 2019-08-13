@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="user-comsumer" />
+        <module name="eureka-server" />
         <module name="user-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cloud-project" target="1.8" />
+      <module name="eureka-server" target="1.8" />
       <module name="user-comsumer" target="1.8" />
       <module name="user-service" target="1.8" />
     </bytecodeTargetLevel>
@@ -19,6 +21,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="cloud-project" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
       <module name="user-comsumer" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>
