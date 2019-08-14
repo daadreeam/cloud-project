@@ -17,7 +17,7 @@ public class UserDao {
     @HystrixCommand(fallbackMethod = "queryUserByIdFallback")
     public User queryUserById(Long id){
         long begin = System.currentTimeMillis();
-        String url = "http://user-service/user/" + id;
+        String url = "http://user-service-lsw/user/" + id;
         User user = this.restTemplate.getForObject(url, User.class);
         long end = System.currentTimeMillis();
         // 记录访问用时：
