@@ -18,6 +18,13 @@
     </properties>
 
     <dependencies>
+
+        <!--重试机制-->
+        <dependency>
+            <groupId>org.springframework.retry</groupId>
+            <artifactId>spring-retry</artifactId>
+        </dependency>
+
         <!-- Eureka客户端 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
