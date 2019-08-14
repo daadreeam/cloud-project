@@ -18,6 +18,11 @@
     </properties>
 
     <dependencies>
+        <!--熔断器-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
 
         <!--重试机制-->
         <dependency>
