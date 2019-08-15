@@ -6,7 +6,6 @@ import com.lsw.userconsumer.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,9 +18,6 @@ public class UserService {
 
     @Autowired
     private UserDao userDao;
-
-    @Autowired
-    private RestTemplate restTemplate;
 
     @Autowired
     private DiscoveryClient discoveryClient;
