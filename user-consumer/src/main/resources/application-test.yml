@@ -26,6 +26,11 @@ user-service-lsw:
 feign:
   hystrix:
     enabled: true # 开启Feign的熔断功能
+#  client:
+#    config:
+#      user-service-lsw: #服务提供者名字
+#        connectTimeout: 5000
+#          readTimeout: 5000
 #hystrix:
 #  command:
 #    default:

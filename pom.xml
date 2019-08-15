@@ -15,6 +15,7 @@
         <module>user-service</module>
         <module>user-consumer</module>
         <module>eureka-server</module>
+        <module>zuul-gateway</module>
     </modules>
 
     <!--定义版本-->
@@ -27,7 +28,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.0.RELEASE</version>
+        <version>2.0.3.RELEASE</version>
     </parent>
 
     <!--子项目中不需要再引入依赖-->

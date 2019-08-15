@@ -1,10 +1,44 @@
 server:
   port: 10010
 spring:
+  main: # by setting spring.main.allow-bean-definition-overriding=true 报错
+    allow-bean-definition-overriding: true
   application:
-    name: api-gateway-lsw
+    name: zuul-gateway-lsw
+#zuul:
+#  routes:
+#    user-service-lsw: # 这里是路由id，随意写
+#      serviceId: user-service-lsw # 指定服务名称
+#      path: /user-service-lsw/** # 这里是映射路径
+#      url: http://127.0.0.1:8081 # 映射路径对应的实际url地址
+# 简化的zuul配置
 zuul:
   routes:
-    user-service-lsw: # 这里是路由id，随意写
-      path: /user-service-lsw/** # 这里是映射路径
-      url: http://127.0.0.1:8081,http://127.0.0.1:8083 # 映射路径对应的实际url地址
+    user-service-lsw: /user-service-lsw/** # 这里是映射路径
+#zuul:
+#  host:
+#    connect-timeout-millis: 15000 #HTTP连接超时要比Hystrix的大
+#    socket-timeout-millis: 60000   #socket超时
+# 使用zuul ！！！ 要记得配置 ribbon超时时长
+ribbon:
+  ConnectTimeout: 250 # 连接超时时间(ms)
+  ReadTimeout: 2000 # 通信超时时间(ms)
+  OkToRetryOnAllOperations: true # 是否对所有操作重试
+  MaxAutoRetriesNextServer: 2 # 同一服务不同实例的重试次数
+  MaxAutoRetries: 1 # 同一实例的重试次数
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMillisecond: 6000 # 熔断超时时长：6000ms
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka,http://127.0.0.1:10087/eureka
+    registry-fetch-interval-seconds: 5 # 获取服务列表的周期：5s
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    instance-id: ${spring.application.name}:${server.port}
